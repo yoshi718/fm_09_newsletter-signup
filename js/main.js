@@ -1,13 +1,17 @@
 const form = document.getElementById("form");
 const closeModalButton = document.querySelector("[data-close-button]");
+const email = document.getElementById("email");
+const myModal = document.getElementById("modal");
+const myOverlay = document.getElementById("overlay");
 
 closeModalButton.addEventListener("click", () => {
-  location.href = "index.html";
+  myModal.classList.remove("active");
+  myOverlay.classList.remove("active");
+  email.value = "";
 });
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = document.getElementById("email");
 
   const isEmail = /\S+@\S+.\S+/;
 
@@ -26,9 +30,6 @@ form.addEventListener("submit", (e) => {
 
   const enteredEmail = document.getElementById("enteredEmail");
   enteredEmail.innerText = email.value;
-
-  const myModal = document.getElementById("modal");
-  const myOverlay = document.getElementById("overlay");
 
   myModal.classList.add("active");
   myOverlay.classList.add("active");
