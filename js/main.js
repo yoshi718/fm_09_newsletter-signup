@@ -2,7 +2,7 @@ const form = document.getElementById("form");
 const closeModalButton = document.querySelector("[data-close-button]");
 
 closeModalButton.addEventListener("click", () => {
-  window.location.href = "/";
+  window.location.href = "index.html";
 });
 
 form.addEventListener("submit", (e) => {
