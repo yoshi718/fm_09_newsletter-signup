@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor - Newsletter Signup</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main_container">
+      <section class="signup-container">
+        <h1>Stay updated!</h1>
+        <p class="description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="signup-container__list">
+          <li>
+            <img src="assets/images/icon-list.svg" alt="check mark" />Product
+            discovery and building what matters
+          </li>
+          <li>
+            <img src="assets/images/icon-list.svg" alt="check mark" />Measuring
+            to ensure updates are a success
+          </li>
+          <li>
+            <img src="assets/images/icon-list.svg" alt="check mark" />And much
+            more! more!
+          </li>
+        </ul>
+        <form
+          name="myForm"
+          id="form"
+          method="get"
+          action="second.html"
+          class="signup-container__form"
+        >
+          <div class="address_label">
+            <label for="email" class="signup-container__form__label"
+              >Email address</label
+            >
+            <span class="signup-container__form__error"
+              >Valid email required</span
+            >
+          </div>
+
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="email-input"
+            placeholder="email@company.com"
+          />
+          <button
+            type="submit"
+            value="submit"
+            class="signup-container__submit-email"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </section>
+      <section>
+        <picture>
+          <source
+            srcset="assets/images/illustration-sign-up-mobile.svg"
+            media="(width<451px)"
+          />
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="signup image"
+            class="image"
+          />
+        </picture>
+      </section>
+    </main>
+    <div>
+      <div class="modal" id="modal">
+        <img
+          src="assets/images/icon-success.svg"
+          alt="Success image"
+          class="icon-success"
+        />
+        <h1>Thanks for subscribing</h1>
+        <p class="description">
+          A confirmation email has been sent to <span id="enteredEmail"></span>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button data-close-button class="btn">Dismiss message</button>
+      </div>
+      <div id="overlay" class=""></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
